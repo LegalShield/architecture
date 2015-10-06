@@ -1,20 +1,28 @@
 # RESTful Patterns
 
-This is a combination of all the references listed below and how we envision ourselves to use RESTful concepts and standards to make an easy to use API. This is an internal document so don't mind the plagiarism. The main point is that we want to highlight the most important parts of the references here so that it's easy to read and it's tailored to our specific use case so we're all on the same page. If you need more information, please feel free to read the references listed below.
+If you need more information, please feel free to read the references listed below.
 
-## Requirements
-
-- It should use web standards where they make sense
-- It should be friendly to the developer
-- It should be simple, intuitive and consistent to make adoption not only easy but pleasant
-- It should be efficient, while maintaining balance with the other requirements
 
 ## Design First
+The routes, request, and response for each endpoint should be designed, then tested and coded.
 
-The routes, request, and response for each endpoint should be designed, then tested and coded. To help in this effort so that everyone can pair with each other and learn how to design great looking RESTful resource definitions, we will be using the following system:
-
-
+## Designing For REST Resources
++ Collection ( Ex: `/v2/plans` )
+	- GET - **Lists** an array of elements that belong to this collection. (Ex: `[ {planID:"1", ...}, {planID:"2", ...}]`)
+	- POST - **Create** a new entry in the collection. 
+	- PUT - **tbd**
+	- PATCH - **tbd**
+	- DELETE - **Delete the entire collection**
++ Element (Ex: `/v2/plans/12345`)
+	- GET - **Retrieve** a representation of this element from the collection
+	- PUT - **Replace** or **Create** (**Upsert**) the element into the collection
+	- PATCH - **Partially Modify** the fields in this element
+	- POST - **Not Used**
+	- DELETE - **Delete** the addressed member of the collection
 
 # References
 
 1) [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+
+2) [REST on Wiki](https://en.wikipedia.org/wiki/Representational_state_transfer)
+

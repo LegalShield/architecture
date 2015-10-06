@@ -1,18 +1,31 @@
 #V2 Resources and Endpoints
 
-#Authentication
+**[See REST Guide For Help](/restful-guide.md)**
 
-#Me/My
+Each header belongs to the resource you are representing and all the endpoints are listed underneath it for that resource.
 
-GET /v2/me
+##Oauth
+
+
+##Me/My
+
+GET /v2/me  
 GET /v2/my
 
-Response:
+Response:  
 ```
-{
+{  
   //???
+  hello
 }
 ```
 
-#Users
+###Plans
 
+###Billing
+
+##Users
+
+
+
+##Plans
