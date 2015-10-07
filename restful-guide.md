@@ -8,7 +8,7 @@ The routes, request, and response for each endpoint should be designed, then tes
 
 ## Designing For REST Resources
 + Collection ( Ex: `/v2/plans` )
-	- GET - **Lists** an array of elements that belong to this collection. (Ex: `[ {planID:"1", ...}, {planID:"2", ...}]`)
+	- GET - **Lists** an array of elements that belong to this collection. (Ex: `[ {id:"1", ...}, {id:"2", ...}]`)
 	- POST - **Create** a new entry in the collection. 
 	- PUT - **tbd**
 	- PATCH - **tbd**
