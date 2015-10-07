@@ -8,9 +8,9 @@ The routes, request, and response for each endpoint should be designed, then tes
 
 ## Designing For REST Resources
 + Collection ( Ex: `/v2/plans` )
-	- GET - **Lists** an array of elements that belong to this collection. (Ex: `[ {id:"1", ...}, {id:"2", ...}]`)
+	- GET - **List** or **Index** an array of elements that belong to this collection. (Ex: `[ {id:"1", ...}, {id:"2", ...}]`)
 	- POST - **Create** a new entry in the collection. 
-	- PUT - **tbd**
+	- PUT - **Not Used** 
 	- PATCH - **tbd**
 	- DELETE - **Delete the entire collection**
 + Element (Ex: `/v2/plans/12345`)
@@ -18,7 +18,7 @@ The routes, request, and response for each endpoint should be designed, then tes
 	- PUT - **Replace** or **Create** (**Upsert**) the element into the collection
 	- PATCH - **Partially Modify** the fields in this element
 	- POST - **Not Used**
-	- DELETE - **Delete** the addressed member of the collection
+	- DELETE - **Delete** this element
 
 # References
 
