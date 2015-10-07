@@ -15,24 +15,24 @@ Each header belongs to the resource you are representing and all the endpoints a
 Response: 200  
 ```
 {  
-    “first_name”: string,  
-    “last_name”: string,  
-    “address_1”: string,  
-    “address_2”: string,  
-    “city”: string,  
-    “state_province”: string,  
-    “postal_code”: string,  
-    "benefits_summary": {  
-        "is_individual": boolean,  
-        "is_group_member" : boolean,  
-        "is_primerica": boolean,  
-        "has_legal_emergency_access": boolean,  
-        "has_small_business": boolean,  
-        "has_idshield": boolean,  
-        "has_legacy_identity_theft": boolean,  
-        "has_cdlp": boolean,  
-        "has_legal": boolean  
-    }
+  “first_name”: string,  
+  “last_name”: string,  
+  “address_1”: string,  
+  “address_2”: string,  
+  “city”: string,  
+  “state_province”: string,  
+  “postal_code”: string,  
+  "benefits_summary": {  
+    "is_individual": boolean,  
+    "is_group_member" : boolean,  
+    "is_primerica": boolean,  
+    "has_legal_emergency_access": boolean,  
+    "has_small_business": boolean,  
+    "has_idshield": boolean,  
+    "has_legacy_identity_theft": boolean,  
+    "has_cdlp": boolean,  
+    "has_legal": boolean  
+  }
 }
 ```
 
@@ -42,13 +42,13 @@ Response: 200
 Request:
 ```
 {    
-    “first_name”: string,  
-    “last_name”: string,  
-    “address_1”: string,  
-    “address_2”: string,  
-    “city”: string,  
-    “state_province”: string,  
-    “postal_code”: string  
+  “first_name”: string,  
+  “last_name”: string,  
+  “address_1”: string,  
+  “address_2”: string,  
+  “city”: string,  
+  “state_province”: string,  
+  “postal_code”: string  
 }
 ```
 
@@ -109,8 +109,8 @@ Response 200:
 Response: 200  
 ```
 {  
-    “next_draft_date”: date,  
-    “draft_account”: string  
+  “next_draft_date”: date,  
+  “draft_account”: string  
 }  
 ```
 
