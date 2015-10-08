@@ -72,14 +72,12 @@ Response 200:
     “id”: numeric  
     "display_name": string,  
     "account_number": numeric,    
-    "member_services_number": string,  
+    "member_services_phone_number": string,  
     "member_services_email": string,  
     "emergency_access": boolean,  
-    "emergency_number": string,
-    "provider": {  
-      “phone_number”: string,  
-      “name”: string  
-    },
+    "emergency_phone_number": string,
+    "provider_phone_number": string,
+    "provider_name": string
   }  
 ]
 ```

@@ -1,4 +1,4 @@
-# RESTful Patterns
+RESTful Patterns
 
 If you need more information, please feel free to read the references listed below.
 
@@ -15,7 +15,7 @@ The routes, request, and response for each endpoint should be designed, then tes
 	- DELETE - **Delete the entire collection**
 + Element (Ex: `/v2/plans/12345`)
 	- GET - **Retrieve** a representation of this element from the collection
-	- PUT - **Replace** or **Create** (**Upsert**) the element into the collection
+	- PUT - **Not Used**
 	- PATCH - **Partially Modify** the fields in this element
 	- POST - **Not Used**
 	- DELETE - **Delete** this element
