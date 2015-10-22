@@ -97,6 +97,67 @@ Response: 200
 
 ##Users
 
+**GET /v2/users?phone_number=3172429840&last_4_SSN=5555&date_of_birth=12-11-982
 
 
+
+Status: 200
+
+Headers:
+
+```
+{ "X-Resource-Count": 3465 }
+```
+
+Body:
+
+```
+[
+  {
+    id: 1234,
+    last_4_ssn: 2222,
+    name: “Jonathon Storer”,
+    date_of_birth: “1982-12-11T00:00:00.000+00:00”, // in iso format
+    memberships: [
+      {
+        id: 1234,
+        type: “LegalShield Personal”, // [ “... Small Business”, “... CDLP”, “IDShield” ]
+        status: “PreCancel”,          // [ “Active”, “Canceled”, “PendingCancel” ]
+        email: “jon@shakelaw.com”,
+        phone_number: “13172429840”,
+        updated_at: "2015-12-11T00:00:00.000+00:00",
+        created_at: "2014-12-11T00:00:00.000+00:00"
+        member_resolution: {
+          id: 1234,
+          status: “Active”
+        },
+        address: {
+          street_1: "123 Main St",
+          street_2: "Apt 3",
+          city: "Ada",
+          state_province: "Ok",
+          zip_code: "11205",
+          country: "US" // [ "CA" ]
+        },
+        entitlements: {
+          can_edit_billing: true, // false
+          can_direct_transfer: true // false
+        },
+        billing: {
+          type: “CC”, // [ “Bank Draft”, “Premium Billing” ]
+          last4: 1234,  // CC number, Bank Draft #
+          pastDue: “19.95”,
+          pastDueDate: “Sept 23rd, 2015”
+        },
+        provider: {
+          id: 9765,
+          name: “Fulfilment Partner Name”,
+          phone_number: “13335554444”
+        }
+      }
+    ]
+  }
+]
+
+```
 ##Plans
