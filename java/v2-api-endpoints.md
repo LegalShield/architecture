@@ -103,13 +103,13 @@ Status: 200
 
 Headers:
 
-```json
+```javascript
 { "X-Resource-Count": 3465 }
 ```
 
 Body:
 
-```json
+```javascript
 [
   {
     id: 1234,
