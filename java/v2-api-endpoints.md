@@ -143,7 +143,7 @@ Body:
           street_1: "123 Main St",
           street_2: "Apt 3",
           city: "Ada",
-          state_province: "Ok",
+          state_province: "OK",
           zip_code: "11205",
           country: "US"
         },
