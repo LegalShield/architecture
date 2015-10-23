@@ -181,7 +181,7 @@ Body:
 Enums
 
 ```
-memberships.type => [ "LeganShield Personal", "LegalShield Small Business", "LegalShield CDLP", "IDShield" ]
+memberships.type => [ "LegalShield Personal", "LegalShield Small Business", "LegalShield CDLP", "IDShield" ]
 memberships.status => [ "Active", "PreCancel, "Pending Cancel Exceptoin", "Pending Cancel", "Canceled" ] (???)
 memberships.member_resolution.status => [ "Active", ??? ]
 memberships.address.country => [ "US", "CA" ]
