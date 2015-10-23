@@ -16,13 +16,13 @@ Each header belongs to the resource you are representing and all the endpoints a
 Response: 200  
 ```
 {  
-  “first_name”: string,  
-  “last_name”: string,  
-  “address_1”: string,  
-  “address_2”: string,  
-  “city”: string,  
-  “state_province”: string,  
-  “postal_code”: string,  
+  "first_name": string,  
+  "last_name": string,  
+  "address_1": string,  
+  "address_2": string,  
+  "city": string,  
+  "state_province": string,  
+  "postal_code": string,  
   "benefits_summary": {  
     "is_individual": boolean,  
     "is_group_member" : boolean,  
@@ -43,13 +43,13 @@ Response: 200
 Request:
 ```
 {    
-  “first_name”: string,  
-  “last_name”: string,  
-  “address_1”: string,  
-  “address_2”: string,  
-  “city”: string,  
-  “state_province”: string,  
-  “postal_code”: string  
+  "first_name": string,  
+  "last_name": string,  
+  "address_1": string,  
+  "address_2": string,  
+  "city": string,  
+  "state_province": string,  
+  "postal_code": string  
 }
 ```
 
@@ -69,7 +69,7 @@ Response 200:
 ```
 [  
   {  
-    “id”: numeric  
+    "id": numeric  
     "display_name": string,  
     "account_number": numeric,    
     "member_services_phone_number": string,  
@@ -90,13 +90,82 @@ Response 200:
 Response: 200  
 ```
 {  
-  “next_draft_date”: date,  
-  “draft_account”: string  
+  "next_draft_date": date,  
+  "draft_account": string  
 }  
 ```
 
 ##Users
 
+GET `/v2/users`
 
+Query:
+
+```javascript
+phone_number=3172429840
+last_4_SSN=5555
+date_of_birth=1982-12-11T00:00:00.000+00:00
+```
+
+Status: 200
+
+Headers:
+
+```javascript
+{ "X-Resource-Count": 3465 }
+```
+
+Body:
+
+```javascript
+[
+  {
+    id: 1234,
+    last_4_ssn: 2222,
+    name: "Jonathon Storer",
+    date_of_birth: "1982-12-11T00:00:00.000+00:00",
+    memberships: [
+      {
+        id: 1234,
+        type: "LegalShield Personal",
+        status: "PreCancel",
+        email: "jon@shakelaw.com",
+        phone_number: "13172429840",
+        updated_at: "2015-12-11T00:00:00.000+00:00",
+        created_at: "2014-12-11T00:00:00.000+00:00",
+        has_resolution: true, // false
+        entitlements: {
+          can_edit_billing: true,
+          can_direct_transfer: true,
+          can_bypass_menu: true
+        },
+        billing: {
+          type: "Credit Card"
+          last4: 1234
+          past_due_amount: "19.95",
+          past_due_date: "2015-10-21T00:00:00.000+00:00"
+        },
+        provider: {
+          id: 9765,
+          name: "Fulfilment Partner Name",
+          phone_number: "13335554444"
+        }
+      }
+    ]
+  }
+]
+
+```
+
+Enums
+
+```
+memberships.type => [ "LegalShield Personal", "LegalShield Small Business", "LegalShield CDLP", "IDShield" ]
+memberships.status => [ "Active", "PreCancel, "Pending Cancel Exception", "Pending Cancel", "Canceled" ] (???)
+memberships.member_resolution.status => [ "Active", ??? ]
+memberships.address.country => [ "US", "CA" ]
+memberships.entitlements.can_bypass_menu => (true when "small business", exception code 23, account status is "Canceled", account status is "Canceled")
+memberships.billing.type => [ "Credit Card", "Bank Draft", "Premium Billing" ]
+```
 
 ##Plans
