@@ -133,8 +133,7 @@ Body:
         phone_number: "13172429840",
         updated_at: "2015-12-11T00:00:00.000+00:00",
         created_at: "2014-12-11T00:00:00.000+00:00"
-        has_active_resolution: false,
-        has_resolution_within_ninety_days: true,
+        has_resolution: false, // false
         address: {
           street_1: "123 Main St",
           street_2: "Apt 3",
