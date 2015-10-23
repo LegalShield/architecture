@@ -182,7 +182,7 @@ Enums
 
 ```
 memberships.type => [ "LegalShield Personal", "LegalShield Small Business", "LegalShield CDLP", "IDShield" ]
-memberships.status => [ "Active", "PreCancel, "Pending Cancel Exceptoin", "Pending Cancel", "Canceled" ] (???)
+memberships.status => [ "Active", "PreCancel, "Pending Cancel Exception", "Pending Cancel", "Canceled" ] (???)
 memberships.member_resolution.status => [ "Active", ??? ]
 memberships.address.country => [ "US", "CA" ]
 memberships.entitlements.can_bypass_menu => (true when "small business", exception code 23, account status is "Canceled", account status is "Canceled")
