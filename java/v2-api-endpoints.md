@@ -133,16 +133,6 @@ Body:
         phone_number: "13172429840",
         updated_at: "2015-12-11T00:00:00.000+00:00",
         created_at: "2014-12-11T00:00:00.000+00:00"
-        exceptions: [
-          {
-            code: 28,
-            message: "you done effed up"
-          },
-          {
-            code: 45,
-            message: "we done effed up"
-          }
-        ],
         member_resolution: {
           id: 1234,
           status: "Active"
