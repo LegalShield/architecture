@@ -97,7 +97,15 @@ Response: 200
 
 ##Users
 
-GET `/v2/users?phone_number=3172429840&last_4_SSN=5555&date_of_birth=12-11-982`
+GET `/v2/users`
+
+Query:
+
+```javascript
+phone_number=3172429840
+last_4_SSN=5555
+date_of_birth=1982-12-11T00:00:00.000+00:00
+```
 
 Status: 200
 
@@ -128,11 +136,11 @@ Body:
         exceptions: [
           {
             code: 28,
-            message: “you done effed up”
+            message: "you done effed up"
           },
           {
             code: 45,
-            message: “we done effed up”
+            message: "we done effed up"
           }
         ],
         member_resolution: {
@@ -155,8 +163,8 @@ Body:
         billing: {
           type: "Credit Card"
           last4: 1234
-          pastDueAmount: "19.95",
-          pastDueDate: "2015-10-21T00:00:00.000+00:00"
+          past_due_amount: "19.95",
+          past_due_date: "2015-10-21T00:00:00.000+00:00"
         },
         provider: {
           id: 9765,
@@ -177,7 +185,7 @@ memberships.type => [ "LeganShield Personal", "LegalShield Small Business", "Leg
 memberships.status => [ "Active", "PreCancel, "Pending Cancel Exceptoin", "Pending Cancel", "Canceled" ] (???)
 memberships.member_resolution.status => [ "Active", ??? ]
 memberships.address.country => [ "US", "CA" ]
-memberships.entitlements.can_bypass_menu => (true when “small business”, exception code 23, account status is “Canceled”, account status is “Canceled”)
+memberships.entitlements.can_bypass_menu => (true when "small business", exception code 23, account status is "Canceled", account status is "Canceled")
 memberships.billing.type => [ "Credit Card", "Bank Draft", "Premium Billing" ]
 ```
 
