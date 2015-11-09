@@ -20,4 +20,7 @@
   - The old AO Web Services endpoints are called V1
   - The new Restful Api is called V2, below are how to write for this new api.
   - [Code Architecture](/java/code-architecture.md) - Best practices for writing code in Java 
-  - [V2 API Endpoints](/java/v2-api-endpoints.md) - The RESTful routes, request, and response for each endpoint should be thought out and designed first here.
+  - Legalshield API Docs: https://github.com/LegalShield/docs
+
+##General Coding Guidelines
+- Do not code defensively: http://danielroop.com/blog/2009/10/15/why-defensive-programming-is-rubbish/
