@@ -35,3 +35,21 @@ Proper testing should include unit tests as well, which are smaller, isolated ch
 - Ex. If you are adding the new endpoint described above, you would add unit tests for any new helper methods you've added to help you get the results you wanted (if you add a find method on the resources, you'd want to test that find in isolation by mocking out database calls and anything else that is outside of that specific method - you'd test it by literally calling it off the resource you're working on). 
 - You'll also want to test any presenters/row mappers that might be involved. 
 - Feature tests plus unit tests should amount to a very thorough run through of essentially every piece of code you've added - if you have code that hasn't been tested indirectly through the feature test or directly through a unit test, you should patch that hole or see if that code is even necessary (testing helps point out extraneous code/ways to make code more efficient).
+
+##General Git Strategy:
++ Make sure you have your SSH certificates setup so you're not entering passwords each time you run a command: https://help.github.com/articles/generating-ssh-keys/
++ To checkout an existing repository use git clone Your-Repo-URL. You can find this url in the github page for this repository. Use the SSH url if you want to use SSH or the HTTPS if you want to use your username & password.
++ Before beginning any work, make sure you are on the master branch and up to date by doing `git pull`
++ Create your new branch using one of two ways:
+  - Push a new branch remotely to start your new feature/piece of work: `git push origin master:your-branch-name` (this will create a new remote branch based off of master) then checkout your new branch: `git checkout your-branch-name`
+  - Create a new branch locally that is not tracking remotely: `git checkout -b your-branch-name`
++ Make whatever changes you need for your feature/piece of work (can be broken up into chunks/commits, doesn't have to be all at once/in one commit because we can squash later): `git commit -m 'WIP or whatever commit message you want'`
++ Push your commit(s): `git push` (make sure you're on your branch when pushing! or use `git push -u origin your-branch-name` if you created your branch locally and it is not tracking remotely yet)
++ Once you have the code ready for review, create a pull request in Github from your branch and add a descriptive title/message so that anyone reviewing knows what you're trying to achieve with that pull request
++ As people make comments or you notice things to clean up, continue to make changes and commit/push to that branch - you'll see the pull request update with those changes until you have an LGTM
++ Now we need to checkout master to get the latest from master: `git checkout master` then `git pull` 
++ (There is an optional step here to merge master into your branch to make sure there are no merge conflicts. .depends on how long ago you created your branch off of master and how much other work has gone into master: `git checkout your-branch-name` then `git merge master`, fix any conflicts, then `git commit -m 'Merging master'` and finally `git push` and `git checkout master` to get to the next step)
++ Merge/Squash your branch: `git merge --squash your-branch-name`
++ Commit the merge: `git commit`
++ This will bring up VIM so you can edit the commit message and remove any previous commit messages down to a single message of: Title of Pull Request, Closes #{number of PR}, LGTM {initials of whoever gave the thumbs up} - once that is done, write/quite VIM to get back to the command line
++ Now you have a single, clean commit to push to master: `git push`
