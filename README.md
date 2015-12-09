@@ -37,6 +37,8 @@ Proper testing should include unit tests as well, which are smaller, isolated ch
 - Feature tests plus unit tests should amount to a very thorough run through of essentially every piece of code you've added - if you have code that hasn't been tested indirectly through the feature test or directly through a unit test, you should patch that hole or see if that code is even necessary (testing helps point out extraneous code/ways to make code more efficient).
 
 ##General Git Strategy:
+- Make sure you have your SSH certificates setup so you're not entering passwords each time you run a command: https://help.github.com/articles/generating-ssh-keys/
+- To checkout an existing repository use git clone Your-Repo-URL. You can find this url in the github page for this repository. Use the SSH url if you want to use SSH or the HTTPS if you want to use your username & password.
 - Before beginning any work, make sure you are on the master branch and up to date by doing `git pull`
 - Push a new branch remotely to start your new feature/piece of work: `git push origin master:your-branch-name` (this will create a new remote branch based off of master)
 - Checkout your new branch: `git checkout your-branch-name`
