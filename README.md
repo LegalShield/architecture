@@ -40,10 +40,12 @@ Proper testing should include unit tests as well, which are smaller, isolated ch
 - Make sure you have your SSH certificates setup so you're not entering passwords each time you run a command: https://help.github.com/articles/generating-ssh-keys/
 - To checkout an existing repository use git clone Your-Repo-URL. You can find this url in the github page for this repository. Use the SSH url if you want to use SSH or the HTTPS if you want to use your username & password.
 - Before beginning any work, make sure you are on the master branch and up to date by doing `git pull`
-- Push a new branch remotely to start your new feature/piece of work: `git push origin master:your-branch-name` (this will create a new remote branch based off of master)
-- Checkout your new branch: `git checkout your-branch-name`
+- Create your new branch using one of two ways:
+-- Push a new branch remotely to start your new feature/piece of work: `git push origin master:your-branch-name` (this will create a new remote branch based off of master)
+-- Checkout your new branch: `git checkout your-branch-name`
+-- Create a new branch locally that is not tracking remotely: `git checkout -b your-branch-name`
 - Make whatever changes you need for your feature/piece of work (can be broken up into chunks/commits, doesn't have to be all at once/in one commit because we can squash later): `git commit -m 'WIP or whatever commit message you want'`
-- Push your commit(s): `git push` (make sure you're on your branch when pushing!)
+- Push your commit(s): `git push` (make sure you're on your branch when pushing! or use `git push -u origin your-branch-name` if you created your branch locally and it is not tracking remotely yet)
 - Once you have the code ready for review, create a pull request in Github from your branch and add a descriptive title/message so that anyone reviewing knows what you're trying to achieve with that pull request
 - As people make comments or you notice things to clean up, continue to make changes and commit/push to that branch - you'll see the pull request update with those changes until you have an LGTM
 - Now we need to checkout master to get the latest from master: `git checkout master` then `git pull` 
